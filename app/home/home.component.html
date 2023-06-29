@@ -1,0 +1,9 @@
+<h1>Olá {{currentUser.firstName}}, Bem vindo!</h1>
+<h6>**Ao deletar sua conta, terá que criar outra para acessar os livros!</h6>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Deletar</a>
+    </li>
+    
+</ul>
